@@ -95,33 +95,47 @@ export default function SkillsSection() {
           animate={isVisible ? "visible" : "hidden"}
         >
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text"
+            className="text-5xl md:text-6xl font-bold text-center mb-20 ultra-gradient"
             variants={itemVariants}
           >
-            Technical Expertise
+            Technical Arsenal
           </motion.h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skillCategory, index) => (
               <motion.div key={index} variants={itemVariants}>
-                <Card className="glass-effect p-8 rounded-2xl transform hover:scale-105 transition-all duration-300 magnetic-element bg-transparent border-[var(--platinum)]/10 h-full">
-                  <div className="text-4xl text-[var(--warm-gold)] mb-4">
-                    <i className={skillCategory.icon}></i>
+                <Card className="cyber-card p-10 rounded-3xl magnetic-element bg-transparent h-full group">
+                  <div className="flex items-center mb-8">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 flex items-center justify-center mr-4 shadow-xl group-hover:shadow-blue-500/30 transition-all duration-500">
+                      <i className={`${skillCategory.icon} text-white text-2xl`}></i>
+                    </div>
+                    <h3 className="text-2xl font-bold holographic-text">
+                      {skillCategory.category}
+                    </h3>
                   </div>
-                  <h3 className="text-xl font-semibold mb-6 text-[var(--platinum)]">
-                    {skillCategory.category}
-                  </h3>
-                  <div className="space-y-4">
+                  <div className="space-y-6">
                     {skillCategory.skills.map((skill, skillIndex) => (
-                      <div key={skillIndex}>
-                        <div className="flex justify-between mb-2">
-                          <span>{skill.name}</span>
-                          <span>{skill.level}%</span>
+                      <div key={skillIndex} className="group/skill">
+                        <div className="flex justify-between mb-3">
+                          <span className="text-blue-100 font-medium">{skill.name}</span>
+                          <span className="text-blue-300 font-bold">{skill.level}%</span>
                         </div>
-                        <Progress
-                          value={isVisible ? skill.level : 0}
-                          className="skill-meter h-2 bg-[var(--graphite)]"
-                        />
+                        <div className="relative">
+                          <div className="skill-meter h-3 rounded-full overflow-hidden">
+                            <motion.div
+                              className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-full"
+                              initial={{ width: 0 }}
+                              animate={{ width: isVisible ? `${skill.level}%` : 0 }}
+                              transition={{ duration: 1.5, delay: index * 0.1 + skillIndex * 0.2 }}
+                            />
+                          </div>
+                          <motion.div
+                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent h-3 rounded-full"
+                            initial={{ x: "-100%" }}
+                            animate={{ x: isVisible ? "200%" : "-100%" }}
+                            transition={{ duration: 2, delay: index * 0.1 + skillIndex * 0.2 + 1 }}
+                          />
+                        </div>
                       </div>
                     ))}
                   </div>

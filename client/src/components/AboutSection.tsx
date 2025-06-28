@@ -37,34 +37,49 @@ export default function AboutSection() {
           animate={isVisible ? "visible" : "hidden"}
         >
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text"
+            className="text-5xl md:text-6xl font-bold text-center mb-20 ultra-gradient"
             variants={itemVariants}
           >
             About Me
           </motion.h2>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div className="space-y-6" variants={itemVariants}>
-              <Card className="glass-effect p-8 rounded-2xl transform hover:scale-105 transition-all duration-300 bg-transparent border-[var(--platinum)]/10">
-                <h3 className="text-2xl font-semibold mb-4 text-[var(--warm-gold)]">Current Journey</h3>
-                <p className="text-gray-300 leading-relaxed">
+            <motion.div className="space-y-8" variants={itemVariants}>
+              <Card className="cyber-card p-10 rounded-3xl magnetic-element bg-transparent">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mr-4">
+                    <i className="fas fa-graduation-cap text-white text-lg"></i>
+                  </div>
+                  <h3 className="text-2xl font-bold holographic-text">Current Journey</h3>
+                </div>
+                <p className="text-blue-100/90 leading-relaxed text-lg">
                   I'm currently pursuing Computer Science Engineering with a specialization in Data Science at VIIT Pune, 
                   graduating in 2027. My passion lies in creating innovative solutions that merge cutting-edge technology 
                   with real-world business challenges.
                 </p>
               </Card>
               
-              <Card className="glass-effect p-8 rounded-2xl transform hover:scale-105 transition-all duration-300 bg-transparent border-[var(--platinum)]/10">
-                <h3 className="text-2xl font-semibold mb-4 text-[var(--warm-gold)]">Professional Experience</h3>
-                <p className="text-gray-300 leading-relaxed">
+              <Card className="cyber-card p-10 rounded-3xl magnetic-element bg-transparent">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mr-4">
+                    <i className="fas fa-briefcase text-white text-lg"></i>
+                  </div>
+                  <h3 className="text-2xl font-bold holographic-text">Professional Experience</h3>
+                </div>
+                <p className="text-blue-100/90 leading-relaxed text-lg">
                   Former Full-Stack Web Developer Intern at Sumago Infotech Pvt. Ltd and Data Science Intern at Ediglobe. 
                   I bring hands-on industry experience to complement my academic foundation.
                 </p>
               </Card>
               
-              <Card className="glass-effect p-8 rounded-2xl transform hover:scale-105 transition-all duration-300 bg-transparent border-[var(--platinum)]/10">
-                <h3 className="text-2xl font-semibold mb-4 text-[var(--warm-gold)]">Philosophy</h3>
-                <p className="text-gray-300 leading-relaxed">
+              <Card className="cyber-card p-10 rounded-3xl magnetic-element bg-transparent">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mr-4">
+                    <i className="fas fa-lightbulb text-white text-lg"></i>
+                  </div>
+                  <h3 className="text-2xl font-bold holographic-text">Philosophy</h3>
+                </div>
+                <p className="text-blue-100/90 leading-relaxed text-lg">
                   I believe in continuous learning, elegant code architecture, and creating digital experiences 
                   that not only function beautifully but also solve meaningful problems.
                 </p>
@@ -72,56 +87,67 @@ export default function AboutSection() {
             </motion.div>
             
             <motion.div className="space-y-8" variants={itemVariants}>
-              <Card className="glass-effect p-8 rounded-2xl bg-transparent border-[var(--platinum)]/10">
-                <h3 className="text-2xl font-semibold mb-6 text-[var(--warm-gold)]">Professional Timeline</h3>
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
+              <Card className="cyber-card p-10 rounded-3xl bg-transparent">
+                <h3 className="text-3xl font-bold mb-8 holographic-text">Professional Timeline</h3>
+                <div className="space-y-8 relative">
+                  {/* Timeline Line */}
+                  <div className="absolute left-6 top-8 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-blue-500"></div>
+                  
+                  <div className="flex items-start space-x-6 relative">
                     <motion.div
-                      className="w-4 h-4 bg-[var(--warm-gold)] rounded-full mt-2"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    />
+                      className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center z-10 shadow-xl shadow-blue-500/30"
+                      animate={{ scale: [1, 1.1, 1], rotate: [0, 5, -5, 0] }}
+                      transition={{ duration: 3, repeat: Infinity }}
+                    >
+                      <i className="fas fa-chart-line text-white"></i>
+                    </motion.div>
                     <div>
-                      <h4 className="font-semibold text-[var(--platinum)]">Data Science Intern</h4>
-                      <p className="text-gray-400">Ediglobe</p>
-                      <p className="text-sm text-gray-500">2023</p>
+                      <h4 className="font-bold text-xl text-white">Data Science Intern</h4>
+                      <p className="text-blue-300 font-semibold">Ediglobe</p>
+                      <p className="text-sm text-blue-200/70">2023</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-4">
+                  
+                  <div className="flex items-start space-x-6 relative">
                     <motion.div
-                      className="w-4 h-4 bg-[var(--warm-gold)] rounded-full mt-2"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                    />
+                      className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center z-10 shadow-xl shadow-cyan-500/30"
+                      animate={{ scale: [1, 1.1, 1], rotate: [0, -5, 5, 0] }}
+                      transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+                    >
+                      <i className="fas fa-code text-white"></i>
+                    </motion.div>
                     <div>
-                      <h4 className="font-semibold text-[var(--platinum)]">Full-Stack Developer Intern</h4>
-                      <p className="text-gray-400">Sumago Infotech Pvt. Ltd</p>
-                      <p className="text-sm text-gray-500">2023</p>
+                      <h4 className="font-bold text-xl text-white">Full-Stack Developer Intern</h4>
+                      <p className="text-blue-300 font-semibold">Sumago Infotech Pvt. Ltd</p>
+                      <p className="text-sm text-blue-200/70">2023</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-4">
+                  
+                  <div className="flex items-start space-x-6 relative">
                     <motion.div
-                      className="w-4 h-4 bg-[var(--deep-blue)] rounded-full mt-2"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                    />
+                      className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center z-10 shadow-xl shadow-purple-500/30"
+                      animate={{ scale: [1, 1.1, 1], rotate: [0, 10, -10, 0] }}
+                      transition={{ duration: 3, repeat: Infinity, delay: 2 }}
+                    >
+                      <i className="fas fa-graduation-cap text-white"></i>
+                    </motion.div>
                     <div>
-                      <h4 className="font-semibold text-[var(--platinum)]">CSE Student</h4>
-                      <p className="text-gray-400">VIIT Pune</p>
-                      <p className="text-sm text-gray-500">2023 - 2027</p>
+                      <h4 className="font-bold text-xl text-white">CSE Student</h4>
+                      <p className="text-blue-300 font-semibold">VIIT Pune</p>
+                      <p className="text-sm text-blue-200/70">2023 - 2027</p>
                     </div>
                   </div>
                 </div>
               </Card>
               
-              <div className="grid grid-cols-2 gap-4">
-                <Card className="glass-effect p-6 rounded-xl text-center bg-transparent border-[var(--platinum)]/10">
-                  <div className="text-3xl font-bold text-[var(--warm-gold)] mb-2">2+</div>
-                  <div className="text-gray-400">Years Experience</div>
+              <div className="grid grid-cols-2 gap-6">
+                <Card className="cyber-card p-8 rounded-2xl text-center bg-transparent magnetic-element">
+                  <div className="text-4xl font-bold ultra-gradient mb-3">2+</div>
+                  <div className="text-blue-200">Years Experience</div>
                 </Card>
-                <Card className="glass-effect p-6 rounded-xl text-center bg-transparent border-[var(--platinum)]/10">
-                  <div className="text-3xl font-bold text-[var(--warm-gold)] mb-2">15+</div>
-                  <div className="text-gray-400">Projects Built</div>
+                <Card className="cyber-card p-8 rounded-2xl text-center bg-transparent magnetic-element">
+                  <div className="text-4xl font-bold ultra-gradient mb-3">15+</div>
+                  <div className="text-blue-200">Projects Built</div>
                 </Card>
               </div>
             </motion.div>
