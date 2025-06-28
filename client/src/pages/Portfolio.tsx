@@ -11,14 +11,12 @@ import Footer from "@/components/Footer";
 
 export default function Portfolio() {
   useEffect(() => {
-    // Add floating cyber orbs with improved animations
+    // Add small floating cyber orbs with minimal glow
     const orbs = [
-      { size: 'w-24 h-24', position: 'top-20 left-20', delay: '0s' },
-      { size: 'w-16 h-16', position: 'top-1/3 right-32', delay: '3s' },
-      { size: 'w-20 h-20', position: 'bottom-1/4 left-1/3', delay: '6s' },
-      { size: 'w-12 h-12', position: 'bottom-32 right-20', delay: '9s' },
-      { size: 'w-32 h-32', position: 'top-1/2 left-10', delay: '12s' },
-      { size: 'w-14 h-14', position: 'top-3/4 right-1/4', delay: '15s' },
+      { size: 'w-8 h-8', position: 'top-20 left-20', delay: '0s' },
+      { size: 'w-6 h-6', position: 'top-1/3 right-32', delay: '4s' },
+      { size: 'w-4 h-4', position: 'bottom-1/4 left-1/3', delay: '8s' },
+      { size: 'w-5 h-5', position: 'bottom-32 right-20', delay: '12s' },
     ];
 
     const orbContainer = document.createElement('div');
@@ -71,13 +69,16 @@ export default function Portfolio() {
     <div className="bg-[var(--deep-void)] text-[var(--ice-white)] font-['Inter'] overflow-x-hidden min-h-screen">
       <CustomCursor />
       <Sidebar />
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <ContactSection />
-      <Footer />
+      {/* Main content container with automatic sidebar offset */}
+      <div className="ml-80 transition-all duration-500 ease-in-out">
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <ContactSection />
+        <Footer />
+      </div>
     </div>
   );
 }

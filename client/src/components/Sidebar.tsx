@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true); // Auto-show sidebar
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [activeSection, setActiveSection] = useState('home');
 
   const menuItems = [
@@ -16,6 +17,9 @@ export default function Sidebar() {
   ];
 
   useEffect(() => {
+    // Initialize dark mode
+    document.documentElement.classList.add('dark');
+    
     const handleScroll = () => {
       const sections = menuItems.map(item => item.id);
       const scrollPosition = window.scrollY + 100;
@@ -35,6 +39,17 @@ export default function Sidebar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    if (isDarkMode) {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+    } else {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    }
+  };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -148,7 +163,7 @@ export default function Sidebar() {
             <h2 className="text-3xl font-bold ultra-gradient mb-2">
               Shubham Paikrao
             </h2>
-            <p className="text-sm text-blue-300">Full-Stack Developer & Data Scientist</p>
+            <p className="text-sm text-blue-300 dark:text-blue-300 light:text-blue-600">Full-Stack Developer & Data Scientist</p>
           </motion.div>
 
           {/* Navigation Items */}
@@ -213,11 +228,26 @@ export default function Sidebar() {
             </div>
           </motion.div>
 
-          {/* Download Resume */}
+          {/* Dark/Light Mode Toggle */}
           <motion.div
             variants={itemVariants}
             custom={menuItems.length + 2}
             className="mt-6"
+          >
+            <Button
+              onClick={toggleDarkMode}
+              className="w-full bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 dark:hover:from-gray-700 dark:hover:via-gray-600 dark:hover:to-gray-700 text-white border-0 rounded-xl py-3 font-semibold transition-all duration-300 shadow-lg"
+            >
+              <i className={`${isDarkMode ? 'fas fa-sun' : 'fas fa-moon'} mr-2`}></i>
+              {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+            </Button>
+          </motion.div>
+
+          {/* Download Resume */}
+          <motion.div
+            variants={itemVariants}
+            custom={menuItems.length + 3}
+            className="mt-4"
           >
             <Button
               onClick={() => console.log('Resume download')}
