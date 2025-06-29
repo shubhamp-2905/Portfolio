@@ -42,7 +42,47 @@ export default function ProjectsSection() {
       technologies: ["D3.js", "React.js", "Python", "PostgreSQL"],
       liveDemo: "#",
       github: "#"
-    }
+    },
+    {
+      title: "Mobile Chat Application",
+      description: "Real-time messaging application built with React Native and Socket.io. Features include group chats, file sharing, push notifications, and end-to-end encryption for secure communication.",
+      image: "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      technologies: ["React Native", "Socket.io", "Node.js", "Redis"],
+      liveDemo: "#",
+      github: "#"
+    },
+    {
+      title: "AI Content Generator",
+      description: "Intelligent content generation platform using OpenAI API and modern web technologies. Supports multiple content types, custom templates, and automated SEO optimization.",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      technologies: ["Next.js", "OpenAI API", "Tailwind CSS", "Prisma"],
+      liveDemo: "#",
+      github: "#"
+    },
+    // {
+    //   title: "Blockchain Voting System",
+    //   description: "Decentralized voting platform built on Ethereum blockchain ensuring transparency and security. Features smart contracts, voter verification, and immutable vote records.",
+    //   image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+    //   technologies: ["Solidity", "Web3.js", "React.js", "Ethereum"],
+    //   liveDemo: "#",
+    //   github: "#"
+    // },
+    // {
+    //   title: "Cloud Storage Manager",
+    //   description: "Enterprise-grade file management system with cloud integration, advanced search capabilities, version control, and collaborative editing features for teams.",
+    //   image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+    //   technologies: ["Vue.js", "AWS S3", "Express.js", "PostgreSQL"],
+    //   liveDemo: "#",
+    //   github: "#"
+    // },
+    // {
+    //   title: "IoT Smart Home Hub",
+    //   description: "Comprehensive smart home automation system with IoT device integration, voice control, energy monitoring, and mobile app for remote management and scheduling.",
+    //   image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+    //   technologies: ["Arduino", "Raspberry Pi", "MQTT", "Flutter"],
+    //   liveDemo: "#",
+    //   github: "#"
+    // }
   ];
 
   const containerVariants = {
@@ -80,7 +120,7 @@ export default function ProjectsSection() {
             Featured Projects
           </motion.h2>
           
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <motion.div key={index} variants={itemVariants}>
                 <Card className="glass-effect rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 magnetic-element bg-transparent border-[var(--platinum)]/10">

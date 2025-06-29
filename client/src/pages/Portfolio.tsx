@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import CustomCursor from "@/components/CustomCursor";
-import Sidebar from "@/components/Sidebar";
+import Navbar from "@/components/Navbar"; // Changed from Sidebar to Navbar
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
@@ -68,9 +68,11 @@ export default function Portfolio() {
   return (
     <div className="bg-[var(--deep-void)] text-[var(--ice-white)] font-['Inter'] overflow-x-hidden min-h-screen">
       <CustomCursor />
-      <Sidebar />
-      {/* Main content container with automatic sidebar offset */}
-      <div className="ml-80 transition-all duration-500 ease-in-out">
+      <Navbar />
+      {/* Main content container - removed ml-80 since we no longer have a sidebar */}
+      <div className="transition-all duration-500 ease-in-out">
+        
+        {/* Uncomment these when you're ready to use your actual components */}
         <HeroSection />
         <AboutSection />
         <SkillsSection />

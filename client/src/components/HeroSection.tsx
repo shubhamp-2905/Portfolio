@@ -37,27 +37,27 @@ export default function HeroSection() {
           transition={{ duration: 1.2 }}
         >
           <motion.h1
-            className="text-7xl md:text-9xl font-bold mb-8 leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight whitespace-nowrap"
             initial={{ opacity: 0, y: 100, rotateX: 90 }}
             animate={{ opacity: 1, y: 0, rotateX: 0 }}
             transition={{ duration: 1.2, delay: 0.3, type: "spring", stiffness: 100 }}
           >
-            <span className="block ultra-gradient">Shubham</span>
-            <span className="block holographic-text">Paikrao</span>
+            <span className="ultra-gradient">Shubham </span>
+            <span className="holographic-text">Paikrao</span>
           </motion.h1>
           
           <motion.div
-            className="text-2xl md:text-3xl mb-10"
+            className="text-lg sm:text-xl md:text-2xl mb-8"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.7 }}
           >
-            <span className="block text-blue-300 mb-2">Full-Stack Developer</span>
+            <span className="block text-blue-300 mb-1">Full-Stack Developer</span>
             <span className="block text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text font-semibold">& Data Scientist</span>
           </motion.div>
           
           <motion.p
-            className="text-xl text-blue-100/80 max-w-3xl mx-auto mb-14 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-blue-100/80 max-w-3xl mx-auto mb-10 leading-relaxed px-4"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
@@ -67,45 +67,45 @@ export default function HeroSection() {
           </motion.p>
           
           <motion.div
-            className="flex flex-col sm:flex-row gap-8 justify-center"
+            className="flex flex-col sm:flex-row gap-6 justify-center"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 1.3 }}
           >
             <Button
               onClick={() => scrollToSection('projects')}
-              className="magnetic-element px-10 py-5 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:from-blue-500 hover:via-purple-500 hover:to-blue-500 text-white font-bold rounded-xl border-0 shadow-2xl hover:shadow-blue-500/30 transition-all duration-500 text-lg neon-border"
+              className="magnetic-element px-8 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:from-blue-500 hover:via-purple-500 hover:to-blue-500 text-white font-bold rounded-xl border-0 shadow-2xl hover:shadow-blue-500/30 transition-all duration-500 text-base neon-border"
             >
-              <i className="fas fa-rocket mr-3"></i>
+              <i className="fas fa-rocket mr-2"></i>
               Explore My Universe
             </Button>
             <Button
-              onClick={downloadResume}
+              onClick={() => window.open('https://drive.google.com/file/d/1iPWKEzptAaPkW2bWVrox54fpkrOp2rNj/view?usp=sharing', '_blank')}
               variant="outline"
-              className="magnetic-element px-10 py-5 glass-effect font-bold rounded-xl hover:bg-white/10 transition-all duration-500 text-lg border-blue-400/30 text-blue-100 hover:text-white hover:border-blue-300/50"
+              className="magnetic-element px-8 py-3 glass-effect font-bold rounded-xl hover:bg-white/10 transition-all duration-500 text-base border-blue-400/30 text-blue-100 hover:text-white hover:border-blue-300/50"
             >
-              <i className="fas fa-download mr-3"></i>
-              Download Resume
+              <i className="fas fa-eye mr-2"></i>
+              View Resume
             </Button>
           </motion.div>
 
           {/* Floating tech elements */}
           <motion.div
-            className="absolute top-20 left-20 text-6xl text-blue-500/20"
+            className="absolute top-20 left-20 text-4xl md:text-5xl text-blue-500/20 hidden md:block"
             animate={{ rotate: 360, scale: [1, 1.2, 1] }}
             transition={{ duration: 20, repeat: Infinity }}
           >
             <i className="fas fa-code"></i>
           </motion.div>
           <motion.div
-            className="absolute top-32 right-32 text-5xl text-purple-500/20"
+            className="absolute top-32 right-32 text-3xl md:text-4xl text-purple-500/20 hidden md:block"
             animate={{ rotate: -360, y: [0, -20, 0] }}
             transition={{ duration: 15, repeat: Infinity }}
           >
             <i className="fas fa-microchip"></i>
           </motion.div>
           <motion.div
-            className="absolute bottom-40 left-32 text-4xl text-cyan-500/20"
+            className="absolute bottom-40 left-32 text-3xl md:text-4xl text-cyan-500/20 hidden md:block"
             animate={{ rotate: 180, scale: [1, 1.3, 1] }}
             transition={{ duration: 25, repeat: Infinity }}
           >
@@ -116,18 +116,18 @@ export default function HeroSection() {
       
       {/* Ultra-modern scroll indicator */}
       <motion.div
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         animate={{ y: [0, 15, 0] }}
         transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
       >
-        <div className="w-8 h-14 border-2 border-blue-400 rounded-full flex justify-center cyber-glow">
+        <div className="w-6 h-12 border-2 border-blue-400 rounded-full flex justify-center cyber-glow">
           <motion.div
-            className="w-1.5 h-4 bg-gradient-to-b from-blue-400 to-purple-500 rounded-full mt-3"
+            className="w-1 h-3 bg-gradient-to-b from-blue-400 to-purple-500 rounded-full mt-2"
             animate={{ opacity: [1, 0.3, 1], scale: [1, 0.8, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           />
         </div>
-        <p className="text-blue-300 text-sm mt-3 font-medium">Scroll to explore</p>
+        <p className="text-blue-300 text-xs mt-2 font-medium">Scroll to explore</p>
       </motion.div>
     </section>
   );

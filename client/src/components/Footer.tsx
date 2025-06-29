@@ -16,12 +16,15 @@ export default function Footer() {
           </div>
           
           <div className="flex items-center space-x-6">
-            <Button
-              onClick={downloadResume}
-              className="magnetic-element px-6 py-3 bg-[var(--warm-gold)] text-[var(--rich-black)] font-semibold rounded-lg hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105"
-            >
-              <i className="fas fa-download mr-2"></i>Download Resume
-            </Button>
+            <button
+              onClick={() => window.open('https://drive.google.com/file/d/1iPWKEzptAaPkW2bWVrox54fpkrOp2rNj/view?usp=sharing', '_blank')}
+               className="px-4 py-2 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:from-blue-500 hover:via-purple-500 hover:to-blue-500 text-white rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+              //  whileHover={{ scale: 1.05, y: -2 }}
+              //  whileTap={{ scale: 0.95 }}
+              >
+               <i className="fas fa-eye mr-2 text-xs"></i>
+              View Resume
+              </button>
             <div className="flex space-x-4">
               <a
                 href="https://www.linkedin.com/in/shubham-paikrao-7848162a7/"

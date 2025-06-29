@@ -111,7 +111,7 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[var(--platinum)]">Email</h4>
-                      <p className="text-gray-400">shubham.paikrao@email.com</p>
+                      <p className="text-gray-400">shubhampaikrao610@gmail.com</p>
                     </div>
                   </div>
                   
@@ -121,7 +121,7 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[var(--platinum)]">Phone</h4>
-                      <p className="text-gray-400">+91 XXX XXX XXXX</p>
+                      <p className="text-gray-400">+91 96990 83147</p>
                     </div>
                   </div>
                   
