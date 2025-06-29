@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "buildCommand": "cd client && npm install && npm run build && cd .. && npm run build:server",
+  "builds": [
+    {
+      "src": "dist/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/dist/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/public/$1"
+    }
+  ],
+  "functions": {
+    "dist/index.js": {
+      "maxDuration": 30
+    }
+  }
+}
