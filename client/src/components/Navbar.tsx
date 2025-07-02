@@ -320,8 +320,8 @@ export default function Navbar() {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <i className="fas fa-download mr-2"></i>
-                    Download Resume
+                    <i className="fas fa-eye mr-2"></i>
+                    view Resume
                   </motion.button>
                 </div>
               </div>
