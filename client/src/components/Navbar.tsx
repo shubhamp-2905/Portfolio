@@ -189,7 +189,7 @@ export default function Navbar() {
 
               {/* Resume Download */}
               <motion.button
-              onClick={() => window.open('https://drive.google.com/file/d/1iPWKEzptAaPkW2bWVrox54fpkrOp2rNj/view?usp=sharing', '_blank')}
+              onClick={() => window.open('https://drive.google.com/file/d/1RXISupbwCQrIew0ESbacpBa9GG9cce78/view?usp=sharing', '_blank')}
                className="px-4 py-2 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 hover:from-blue-500 hover:via-purple-500 hover:to-blue-500 text-white rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
                whileHover={{ scale: 1.05, y: -2 }}
                whileTap={{ scale: 0.95 }}

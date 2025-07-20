@@ -80,7 +80,7 @@ export default function HeroSection() {
               Explore My Universe
             </Button>
             <Button
-              onClick={() => window.open('https://drive.google.com/file/d/1iPWKEzptAaPkW2bWVrox54fpkrOp2rNj/view?usp=sharing', '_blank')}
+              onClick={() => window.open('https://drive.google.com/file/d/1RXISupbwCQrIew0ESbacpBa9GG9cce78/view?usp=sharing', '_blank')}
               variant="outline"
               className="magnetic-element px-8 py-3 glass-effect font-bold rounded-xl hover:bg-white/10 transition-all duration-500 text-base border-blue-400/30 text-blue-100 hover:text-white hover:border-blue-300/50"
             >

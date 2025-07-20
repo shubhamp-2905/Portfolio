@@ -102,9 +102,10 @@ export default function AboutSection() {
                       <i className="fas fa-chart-line text-white"></i>
                     </motion.div>
                     <div>
-                      <h4 className="font-bold text-xl text-white">Data Science Intern</h4>
-                      <p className="text-blue-300 font-semibold">Ediglobe</p>
-                      <p className="text-sm text-blue-200/70">2023</p>
+                      <h4 className="font-bold text-xl text-white">Full-Stack Developer Intern</h4>
+                      <p className="text-blue-300 font-semibold">Sumago Infotech Pvt. Ltd</p>
+                      <p className="text-sm text-blue-200/70">2024</p>
+                      
                     </div>
                   </div>
                   
@@ -117,9 +118,10 @@ export default function AboutSection() {
                       <i className="fas fa-code text-white"></i>
                     </motion.div>
                     <div>
-                      <h4 className="font-bold text-xl text-white">Full-Stack Developer Intern</h4>
-                      <p className="text-blue-300 font-semibold">Sumago Infotech Pvt. Ltd</p>
-                      <p className="text-sm text-blue-200/70">2023</p>
+                      <h4 className="font-bold text-xl text-white">Data Science Intern</h4>
+                      <p className="text-blue-300 font-semibold">Ediglobe</p>
+                      <p className="text-sm text-blue-200/70">2024</p>
+                      
                     </div>
                   </div>
                   
@@ -134,7 +136,7 @@ export default function AboutSection() {
                     <div>
                       <h4 className="font-bold text-xl text-white">CSE Student</h4>
                       <p className="text-blue-300 font-semibold">VIIT Pune</p>
-                      <p className="text-sm text-blue-200/70">2023 - 2027</p>
+                      <p className="text-sm text-blue-200/70">2024 - 2027</p>
                     </div>
                   </div>
                 </div>
@@ -142,8 +144,8 @@ export default function AboutSection() {
               
               <div className="grid grid-cols-2 gap-6">
                 <Card className="cyber-card p-8 rounded-2xl text-center bg-transparent magnetic-element">
-                  <div className="text-4xl font-bold ultra-gradient mb-3">2+</div>
-                  <div className="text-blue-200">Years Experience</div>
+                  <div className="text-4xl font-bold ultra-gradient mb-3">2x</div>
+                  <div className="text-blue-200">Internships</div>
                 </Card>
                 <Card className="cyber-card p-8 rounded-2xl text-center bg-transparent magnetic-element">
                   <div className="text-4xl font-bold ultra-gradient mb-3">15+</div>

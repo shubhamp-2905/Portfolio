@@ -10,7 +10,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
-import { apiRequest } from "@/lib/queryClient";
+import emailjs from '@emailjs/browser';
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -42,13 +42,29 @@ export default function ContactSection() {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
-      await apiRequest('POST', '/api/contact', data);
+      // EmailJS configuration
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        subject: data.subject,
+        message: data.message,
+        to_name: 'Shubham Paikrao', // Your name
+      };
+
+      await emailjs.send(
+        'YOUR_SERVICE_ID',     // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID',    // Replace with your EmailJS template ID
+        templateParams,
+        'YOUR_PUBLIC_KEY'      // Replace with your EmailJS public key
+      );
+
       toast({
         title: "Message sent successfully!",
         description: "Thank you for your message. I'll get back to you soon.",
       });
       form.reset();
     } catch (error) {
+      console.error('EmailJS Error:', error);
       toast({
         title: "Failed to send message",
         description: "Please try again later or contact me directly.",
